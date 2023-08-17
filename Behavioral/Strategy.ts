@@ -21,10 +21,7 @@ class VintageFilter implements ImageFilter {
 }
 
 class ImageProcessor {
-  private filter: ImageFilter;
-  constructor(filter: ImageFilter) {
-    this.filter = filter;
-  }
+  private filter!: ImageFilter; //!-гарантує ініціалізацію цієї властивості під час роботи програми
   setFilter(filter: ImageFilter) {
     this.filter = filter;
   }
@@ -37,9 +34,10 @@ const sepiaFilter = new SepiaFilter();
 const blackAndWhiteFilter = new BlackAndWhiteFilter();
 const vintageFilter = new VintageFilter();
 
-const processor = new ImageProcessor(sepiaFilter);
+const processor = new ImageProcessor();
 const originalImage = "Original Image";
 
+processor.setFilter(sepiaFilter);
 console.log("Processed Image:", processor.processImage(originalImage));
 
 processor.setFilter(blackAndWhiteFilter);

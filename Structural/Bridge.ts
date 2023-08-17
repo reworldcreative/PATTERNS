@@ -1,8 +1,8 @@
 interface PaymentMethod {
-  processOrder(product: Product): void;
+  processOrder(product: ProductC): void;
 }
 class CreditCardPayment implements PaymentMethod {
-  processOrder(product: Product): void {
+  processOrder(product: ProductC): void {
     const amount = product.calculatePrice();
     console.log(
       `Processing credit card payment of $${amount} for ${product.getType()} product`
@@ -11,7 +11,7 @@ class CreditCardPayment implements PaymentMethod {
   }
 }
 class PayPalPayment implements PaymentMethod {
-  processOrder(product: Product): void {
+  processOrder(product: ProductC): void {
     const amount = product.calculatePrice();
     console.log(
       `Processing PayPal payment of $${amount} for ${product.getType()} product`
@@ -20,11 +20,11 @@ class PayPalPayment implements PaymentMethod {
   }
 }
 
-interface Product {
+interface ProductC {
   calculatePrice(): number;
   getType(): string;
 }
-class PhysicalProduct implements Product {
+class PhysicalProduct implements ProductC {
   calculatePrice(): number {
     return 50;
   }
@@ -32,7 +32,7 @@ class PhysicalProduct implements Product {
     return "physical";
   }
 }
-class DigitalProduct implements Product {
+class DigitalProduct implements ProductC {
   calculatePrice(): number {
     return 30;
   }
@@ -44,7 +44,7 @@ class DigitalProduct implements Product {
 class PaymentProcessor {
   constructor(private paymentMethod: PaymentMethod) {}
 
-  processProduct(product: Product): void {
+  processProduct(product: ProductC): void {
     const amount = product.calculatePrice();
     this.paymentMethod.processOrder(product);
   }

@@ -1,10 +1,10 @@
 class User {
   constructor(
-    private username: string,
-    private email: string,
-    private password: string,
-    private age: number,
-    private admin: boolean
+    public username: string = "",
+    public email: string = "",
+    public password: string = "",
+    public age: number = 0,
+    public admin: boolean = false
   ) {}
 
   getInfo(): string {
@@ -12,55 +12,93 @@ class User {
   }
 }
 
-class UserBuilder {
-  private username: string = "";
-  private email: string = "";
-  private password: string = "";
-  private age: number = 0;
-  private admin: boolean = false;
+interface Builder {
+  setUsername(username: string): Builder;
+  setEmail(email: string): Builder;
+  setPassword(password: string): Builder;
+  setAge(age: number): Builder;
+  setAdmin(): Builder;
+  build(): User;
+}
 
-  setUsername(username: string): UserBuilder {
-    this.username = username;
+class UserBuilder implements Builder {
+  private user: User;
+  constructor() {
+    this.user = new User();
+  }
+
+  setUsername(username: string): Builder {
+    this.user.username = username;
     return this;
   }
 
-  setEmail(email: string): UserBuilder {
-    this.email = email;
+  setEmail(email: string): Builder {
+    this.user.email = email;
     return this;
   }
 
-  setPassword(password: string): UserBuilder {
-    this.password = password;
+  setPassword(password: string): Builder {
+    this.user.password = password;
     return this;
   }
 
-  setAge(age: number): UserBuilder {
-    this.age = age;
+  setAge(age: number): Builder {
+    this.user.age = age;
     return this;
   }
 
-  setAdmin(admin: boolean): UserBuilder {
-    this.admin = admin;
+  setAdmin(): Builder {
+    this.user.admin = false;
     return this;
   }
 
   build(): User {
-    return new User(
-      this.username,
-      this.email,
-      this.password,
-      this.age,
-      this.admin
-    );
+    return this.user;
   }
 }
 
-const admin = new UserBuilder()
+class AdminBuilder implements Builder {
+  private user: User;
+  constructor() {
+    this.user = new User();
+  }
+
+  setUsername(username: string): Builder {
+    this.user.username = username;
+    return this;
+  }
+
+  setEmail(email: string): Builder {
+    this.user.email = email;
+    return this;
+  }
+
+  setPassword(password: string): Builder {
+    this.user.password = password;
+    return this;
+  }
+
+  setAge(age: number): Builder {
+    this.user.age = age;
+    return this;
+  }
+
+  setAdmin(): Builder {
+    this.user.admin = true;
+    return this;
+  }
+
+  build(): User {
+    return this.user;
+  }
+}
+
+const admin = new AdminBuilder()
   .setUsername("john_doe")
   .setEmail("john@example.com")
   .setPassword("secretpassword")
   .setAge(30)
-  .setAdmin(true)
+  .setAdmin()
   .build();
 console.log("admin-", admin.getInfo());
 

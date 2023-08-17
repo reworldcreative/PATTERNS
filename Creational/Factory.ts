@@ -48,11 +48,7 @@ class CargoPlane implements Plane {
 }
 
 class PlaneFactory {
-  static createPlane(
-    type: "passenger" | "cargo",
-    manufacturer: string,
-    model: string
-  ): Plane {
+  createPlane(type: string, manufacturer: string, model: string): Plane {
     switch (type) {
       case "passenger":
         return new PassengerPlane(manufacturer, model);
@@ -63,7 +59,8 @@ class PlaneFactory {
     }
   }
 }
-const passengerPlane: Plane = PlaneFactory.createPlane(
+const planeFactory: PlaneFactory = new PlaneFactory();
+const passengerPlane: Plane = planeFactory.createPlane(
   "passenger",
   "Boeing",
   "747"
@@ -71,6 +68,6 @@ const passengerPlane: Plane = PlaneFactory.createPlane(
 passengerPlane.takeOff(); //Passenger plane Boeing 747 is taking off.
 passengerPlane.land(); // Passenger plane Boeing 747 is landing.
 
-const cargoPlane: Plane = PlaneFactory.createPlane("cargo", "Airbus", "A380");
+const cargoPlane: Plane = planeFactory.createPlane("cargo", "Airbus", "A380");
 cargoPlane.takeOff(); //  Cargo plane Airbus A380 is taking off.
 cargoPlane.land(); // Cargo plane Airbus A380 is landing.

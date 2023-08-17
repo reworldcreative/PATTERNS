@@ -40,7 +40,7 @@ class DrawingHistory {
     this.states.push(state);
   }
   popState(stepsBack: number = 1): void {
-    if (stepsBack + 1 <= this.states.length) {
+    if (stepsBack <= this.states.length - 1) {
       console.log("Відновлюємо попередній стан:");
       this.states[this.states.length - (stepsBack + 1)].draw();
     } else {

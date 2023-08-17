@@ -43,14 +43,14 @@ class Settings {
   }
 }
 
-const Page1 = Settings.getInstance();
-const Page2 = Settings.getInstance();
+const Page1Menu = Settings.getInstance();
+const Page2Menu = Settings.getInstance();
 // console.log(Page1 === Page2); // true
 
-Page1.setTheme("dark");
-Page2.setLanguage("fr");
-Page1.setNotifications(false);
+Page1Menu.setTheme("dark");
+Page2Menu.setLanguage("fr");
+Page1Menu.setNotifications(false);
 
-console.log(Page2.getTheme()); //  dark
-console.log(Page1.getLanguage()); //  fr
-console.log(Page2.getNotifications()); // false
+console.log(Page2Menu.getTheme()); //  dark
+console.log(Page1Menu.getLanguage()); //  fr
+console.log(Page2Menu.getNotifications()); // false

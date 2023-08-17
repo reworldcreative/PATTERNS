@@ -13,14 +13,14 @@ class Library {
     this.books.push(book);
   }
 
-  getIterator(): Iterator<Book> {
+  getCollection(): Iterator<Book> {
     return new BookIterator(this.books);
   }
 }
 
 interface Iterator<T> {
   hasNext(): boolean;
-  next(): IteratorResult<T>;
+  next(): IteratorResult<Book>;
 }
 
 class BookIterator implements Iterator<Book> {
@@ -47,7 +47,7 @@ library.addBook(new Book("Пригоди Гаррі Поттера", "Джоан
 library.addBook(new Book("1984", "Джордж Орвелл", "Наукова фантастика"));
 library.addBook(new Book("Пісня льоду й полум'я", "Джордж Мартін", "Фентезі"));
 
-const iterator = library.getIterator();
+const iterator = library.getCollection();
 
 while (iterator.hasNext()) {
   const book = iterator.next().value;

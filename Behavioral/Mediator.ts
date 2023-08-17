@@ -1,65 +1,49 @@
 class OrderMediator {
+  private customers: Customer[] = [];
   private orders: Order[] = [];
-  private messageService: MessageService;
-  private inventory: Inventory;
-  private shippingService: ShippingService;
 
-  constructor() {
-    this.messageService = new MessageService(this);
-    this.inventory = new Inventory(this);
-    this.shippingService = new ShippingService(this);
+  registerCustomer(customer: Customer) {
+    this.customers.push(customer);
   }
 
-  addOrder(order: Order) {
+  createOrder(product: string, quantity: number, customer: Customer) {
+    const order = new Order(this.orders.length + 1, product, quantity);
     this.orders.push(order);
-    this.messageService.sendConfirmation(order);
-    this.inventory.updateInventory(order);
-    this.shippingService.shipOrder(order);
+    customer.receiveOrder(order);
   }
 }
 
 class Order {
   constructor(
     private orderId: number,
-    private productId: number,
+    private product: string,
     private quantity: number
   ) {}
 
   getInfo(): string {
-    return `Order ID: ${this.orderId}, Product ID: ${this.productId}, Quantity: ${this.quantity}`;
+    return `Order ID: ${this.orderId}, Product: ${this.product}, Quantity: ${this.quantity}`;
   }
 }
 
-class MessageService {
-  constructor(private mediator: OrderMediator) {}
-  sendConfirmation(order: Order) {
-    console.log(
-      "Відправити підтвердження замовлення клієнту:",
-      order.getInfo()
-    );
+class Customer {
+  constructor(private name: string, private mediator: OrderMediator) {
+    this.mediator.registerCustomer(this);
+  }
+
+  receiveOrder(order: Order) {
+    console.log(`[${this.name}] Received new order: ${order.getInfo()}`);
+  }
+
+  makeOrder(product: string, quantity: number) {
+    this.mediator.createOrder(product, quantity, this);
   }
 }
 
-class Inventory {
-  private products: Map<number, number> = new Map();
-  constructor(private mediator: OrderMediator) {}
-  updateInventory(order: Order) {
-    console.log("кількість товарів на складі оновлена");
-  }
-}
+const mediator = new OrderMediator();
 
-class ShippingService {
-  constructor(private mediator: OrderMediator) {}
+const customer1 = new Customer("Customer 1", mediator);
+const customer2 = new Customer("Customer 2", mediator);
 
-  shipOrder(order: Order) {
-    console.log("Відправити посилку клієнту");
-  }
-}
-
-const orderMediator = new OrderMediator();
-
-const order1 = new Order(1, 101, 3);
-const order2 = new Order(2, 102, 2);
-
-orderMediator.addOrder(order1);
-orderMediator.addOrder(order2);
+customer1.makeOrder("Product A", 5);
+customer2.makeOrder("Product B", 10);
+customer1.makeOrder("Product B", 5);

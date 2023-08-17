@@ -1,6 +1,5 @@
 class Coffee {
   price: number;
-
   constructor() {
     this.price = 5;
   }
@@ -23,24 +22,17 @@ class Topping extends Coffee {
 }
 
 class Milk extends Topping {
-  constructor(coffee: Coffee) {
-    super(coffee);
-  }
-
   cost(): number {
     return this.coffee.cost() + 2;
   }
 
   description(): string {
-    return this.coffee.description() + ", Milk";
+    return `${super.description()}, Milk`;
+    // return this.coffee.description() + ", Milk";
   }
 }
 
 class Sugar extends Topping {
-  constructor(coffee: Coffee) {
-    super(coffee);
-  }
-
   cost(): number {
     return this.coffee.cost() + 1;
   }
@@ -51,10 +43,12 @@ class Sugar extends Topping {
 }
 
 let latte: Coffee = new Coffee();
-console.log(latte.description(), latte.cost(), "$");
-
+console.log("latte -", latte.description(), latte.cost(), "$");
 latte = new Milk(latte);
-console.log(latte.description(), latte.cost(), "$");
-
+console.log("latte -", latte.description(), latte.cost(), "$");
 latte = new Sugar(latte);
-console.log(latte.description(), latte.cost(), "$");
+console.log("latte -", latte.description(), latte.cost(), "$");
+let espresso: Coffee = new Coffee();
+console.log("espresso -", espresso.description(), espresso.cost(), "$");
+espresso = new Sugar(espresso);
+console.log("espresso -", espresso.description(), espresso.cost(), "$");

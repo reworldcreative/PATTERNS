@@ -20,9 +20,11 @@ class ProductFlyweightFactory {
   displayFlyweights(): void {
     const count = Object.keys(this.flyweights).length;
     console.log(`Збережені - ${count} - легковажкі об'єкти:`);
-    for (const key in this.flyweights) {
-      console.log(key);
-    }
+    // for (const key in this.flyweights) {
+    //   console.log(key);
+    // }
+
+    console.log(this.flyweights);
   }
 }
 

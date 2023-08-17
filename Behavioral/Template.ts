@@ -1,12 +1,14 @@
 abstract class Game {
-  abstract initialize(): void;
-  abstract startPlay(): void;
-  abstract endPlay(): void;
+  protected initialize(): void {}
+  protected startPlay(): void {}
+  protected endPlay(): void {}
+  protected awardPlayers(): void {}
 
   play(): void {
     this.initialize();
     this.startPlay();
     this.endPlay();
+    this.awardPlayers();
   }
 }
 
@@ -21,10 +23,9 @@ class FootballGame extends Game {
 
   endPlay(): void {
     console.log("Football game ended. Final score recorded.");
-    this.awardPlayers();
   }
 
-  protected awardPlayers(): void {
+  awardPlayers(): void {
     console.log("Awarding players for their performance.");
   }
 }

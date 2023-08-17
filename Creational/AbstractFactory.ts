@@ -75,7 +75,7 @@ abstract class TransportFactory {
   abstract createCar(model: string, capacity: number): Cars;
 }
 
-class MilitaryTransportFactory extends TransportFactory {
+class MilitaryTransportFactory implements TransportFactory {
   createPlane(model: string, capacity: number): Planes {
     return new MilitaryPlane(model, capacity);
   }
@@ -84,7 +84,7 @@ class MilitaryTransportFactory extends TransportFactory {
   }
 }
 
-class SportTransportFactory extends TransportFactory {
+class SportTransportFactory implements TransportFactory {
   createPlane(model: string, capacity: number): Planes {
     return new SportPlane(model, capacity);
   }
@@ -95,20 +95,26 @@ class SportTransportFactory extends TransportFactory {
 
 function production(
   factory: TransportFactory,
-  planeModel: string,
-  planeCapacity: number,
-  carModel: string,
-  carCapacity: number
+  vehicleType: string,
+  model: string,
+  capacity: number
 ) {
-  const plane: Planes = factory.createPlane(planeModel, planeCapacity);
-  const car: Cars = factory.createCar(carModel, carCapacity);
-
-  plane.fly();
-  car.move();
+  if (vehicleType === "Plane") {
+    const plane: Planes = factory.createPlane(model, capacity);
+    plane.fly();
+  } else if (vehicleType === "Car") {
+    const car: Cars = factory.createCar(model, capacity);
+    car.move();
+  } else {
+    console.log("Невірний тип транспорту");
+  }
 }
 
 const militaryFactory: TransportFactory = new MilitaryTransportFactory();
 const sportFactory: TransportFactory = new SportTransportFactory();
 
-production(militaryFactory, "F-16", 1, "Tank", 5);
-production(sportFactory, "EGM", 2, "Bolid", 1);
+production(militaryFactory, "Plane", "F-16", 1);
+production(militaryFactory, "Car", "Tank", 5);
+
+production(sportFactory, "Plane", "EGM", 2);
+production(sportFactory, "Car", "Bolid", 1);
