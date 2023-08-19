@@ -20,8 +20,8 @@ const rose1 = RosePrototipe.clone();
 const rose2 = RosePrototipe.clone();
 rose2.color = "white";
 const rose3 = RosePrototipe.clone();
-rose2.type = "Silveston";
-rose2.height = 60;
+rose3.type = "Silveston";
+rose3.height = 60;
 
 console.log(rose1.getInfo());
 console.log(rose2.getInfo());

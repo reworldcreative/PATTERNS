@@ -100,11 +100,11 @@ const admin = new AdminBuilder()
   .setAge(30)
   .setAdmin()
   .build();
-console.log("admin-", admin.getInfo());
+console.log("admin-\n", admin.getInfo());
 
 const user = new UserBuilder()
   .setUsername("ashley")
   .setEmail("ashley@example.com")
   .setPassword("testpass")
   .build();
-console.log("user-", user.getInfo());
+console.log("user-\n", user.getInfo());

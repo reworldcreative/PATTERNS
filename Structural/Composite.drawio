@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="FZIrp36h-1Tzr1hHb8CC" name="Page-1">
-        <mxGraphModel dx="397" dy="326" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="662" dy="352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8,10 +8,10 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=default;fontColor=#FFFFFF;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="28" y="140" width="750" height="520" as="geometry"/>
+                    <mxGeometry x="50" y="335" width="750" height="520" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#ffffff&quot;&gt;&lt;i&gt;OrganizationComponent&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="315" y="50" width="170" height="110" as="geometry"/>
+                    <mxGeometry x="337" y="245" width="170" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="&lt;font color=&quot;#ffffff&quot;&gt;+&amp;nbsp;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;name: string&lt;/span&gt;&lt;/font&gt;" style="text;strokeColor=default;fillColor=default;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry y="30" width="170" height="30" as="geometry"/>
@@ -22,13 +22,13 @@
                 <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontColor=#FFFFFF;endArrow=diamondThin;endFill=0;endSize=18;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="6" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="508" y="400"/>
-                            <mxPoint x="440" y="400"/>
+                            <mxPoint x="530" y="595"/>
+                            <mxPoint x="462" y="595"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="6" value="&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px; text-align: left;&quot;&gt;Department&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="423" y="422" width="170" height="170" as="geometry"/>
+                    <mxGeometry x="445" y="617" width="170" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;+ name: string&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;-&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;employees[]&lt;br&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;subDepartments []&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="text;strokeColor=default;fillColor=default;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="6" vertex="1">
                     <mxGeometry y="30" width="170" height="70" as="geometry"/>
@@ -39,7 +39,7 @@
                 <mxCell id="9" value="&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;+&lt;/span&gt;&amp;nbsp;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;display() &lt;br&gt;&lt;/span&gt;+&amp;nbsp;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;getTotalSalary()&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="6" vertex="1">
                     <mxGeometry y="130" width="170" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" style="edgeStyle=none;html=1;endArrow=open;endFill=0;exitX=1;exitY=0.757;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.994;entryY=0.082;entryDx=0;entryDy=0;entryPerimeter=0;endSize=12;startSize=18;startArrow=diamondThin;startFill=0;" edge="1" parent="6" source="7" target="6">
+                <mxCell id="30" style="edgeStyle=none;html=1;endArrow=open;endFill=0;exitX=1;exitY=0.757;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.994;entryY=0.082;entryDx=0;entryDy=0;entryPerimeter=0;endSize=12;startSize=18;startArrow=diamondThin;startFill=0;" parent="6" source="7" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="367" y="-2" as="targetPoint"/>
                         <Array as="points">
@@ -50,15 +50,15 @@
                 </mxCell>
                 <mxCell id="18" style="edgeStyle=none;html=1;fontColor=#FFFFFF;entryX=0.25;entryY=1;entryDx=0;entryDy=0;endArrow=diamondThin;endFill=0;endSize=18;" parent="1" source="10" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="340" y="380" as="targetPoint"/>
+                        <mxPoint x="362" y="575" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="240" y="400"/>
-                            <mxPoint x="360" y="400"/>
+                            <mxPoint x="262" y="595"/>
+                            <mxPoint x="382" y="595"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="10" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#ffffff&quot;&gt;Employee&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="150" y="420" width="170" height="120" as="geometry"/>
+                    <mxGeometry x="172" y="615" width="170" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="16" value="&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;+ name: string &lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#ffffff&quot;&gt;+ salary: number&lt;/font&gt;&lt;/div&gt;" style="text;strokeColor=default;fillColor=default;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="10" vertex="1">
                     <mxGeometry y="30" width="170" height="50" as="geometry"/>
@@ -67,7 +67,7 @@
                     <mxGeometry y="80" width="170" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px; text-align: left;&quot;&gt;Company&lt;/span&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="320" y="220" width="160" height="140" as="geometry"/>
+                    <mxGeometry x="342" y="415" width="160" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="&lt;span style=&quot;font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;+ name: string&lt;br&gt;- departments[]&lt;/span&gt;" style="text;strokeColor=default;fillColor=default;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="12" vertex="1">
                     <mxGeometry y="30" width="160" height="50" as="geometry"/>
@@ -77,7 +77,7 @@
                 </mxCell>
                 <mxCell id="22" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FFFFFF;endArrow=diamondThin;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=12;" parent="1" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="320" y="487" as="sourcePoint"/>
+                        <mxPoint x="342" y="682" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>

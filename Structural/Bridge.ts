@@ -46,7 +46,7 @@ class PaymentProcessor {
 
   processProduct(product: ProductC): void {
     const amount = product.calculatePrice();
-    this.paymentMethod.processOrder(product);
+    this.paymentMethod.processOrder(product); // міст
   }
 }
 
