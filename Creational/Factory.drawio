@@ -25,13 +25,13 @@
                 <mxCell id="10" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;CargoPlane&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;startSize=50;" parent="1" vertex="1">
                     <mxGeometry x="680" y="510" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;PlaneFactory&lt;/font&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="210" y="310" width="210" height="70" as="geometry"/>
+                <mxCell id="13" value="&lt;span style=&quot;color: rgb(255, 255, 255); font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px; text-align: left;&quot;&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/span&gt;&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;PlaneFactory&lt;/font&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=default;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="310" width="210" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="&lt;span style=&quot;color: rgb(255, 255, 255); font-family: &amp;quot;Söhne Mono&amp;quot;, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;i&gt;  + createPlane(): Plane&lt;/i&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="13" vertex="1">
-                    <mxGeometry y="30" width="210" height="40" as="geometry"/>
+                    <mxGeometry y="40" width="210" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;fontColor=#FFFFFF;dashed=1;endArrow=open;endFill=0;exitX=1;exitY=0.6;exitDx=0;exitDy=0;exitPerimeter=0;endSize=12;entryX=0;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="14" target="29" edge="1">
+                <mxCell id="18" style="edgeStyle=none;html=1;fontColor=#FFFFFF;dashed=1;endArrow=open;endFill=0;exitX=1;exitY=0.35;exitDx=0;exitDy=0;exitPerimeter=0;endSize=12;entryX=0;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="14" target="29" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="455" y="382" as="targetPoint"/>
                     </mxGeometry>
