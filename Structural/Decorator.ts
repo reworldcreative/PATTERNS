@@ -52,3 +52,6 @@ let espresso: Coffee = new Coffee();
 console.log("espresso -", espresso.description(), espresso.cost(), "$");
 espresso = new Sugar(espresso);
 console.log("espresso -", espresso.description(), espresso.cost(), "$");
+
+//
+// Основна ідея паттерна декоратор полягає в тому, щоб додавати додаткові можливості або змінювати поведінку об'єктів, не змінюючи їхній структури.

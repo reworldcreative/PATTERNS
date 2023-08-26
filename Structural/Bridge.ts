@@ -60,3 +60,4 @@ const paymentProcessor2 = new PaymentProcessor(payPalPayment);
 
 paymentProcessor1.processProduct(physicalProduct);
 paymentProcessor2.processProduct(digitalProduct);
+// creditCardPayment.processOrder(digitalProduct);

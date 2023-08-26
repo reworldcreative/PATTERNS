@@ -24,37 +24,52 @@
                 <mxCell id="11" value="Client" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=default;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="210" y="396" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" style="edgeStyle=none;html=1;fontColor=#FFFFFF;endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="13" target="20" edge="1">
+                <mxCell id="14" style="edgeStyle=none;html=1;fontColor=#FFFFFF;endArrow=open;endFill=0;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="13" target="20" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="388" y="544" as="sourcePoint"/>
                         <mxPoint x="429.51449275362324" y="500" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="22" value="use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="14" vertex="1" connectable="0">
+                    <mxGeometry x="0.3159" y="-4" relative="1" as="geometry">
+                        <mxPoint x="-15" y="5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="13" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;rose1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=default;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="318.5" y="620" width="80" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=12;" parent="1" source="15" target="20" edge="1">
+                <mxCell id="19" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=12;" parent="1" source="15" target="20" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="19" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4794" y="-2" relative="1" as="geometry">
+                        <mxPoint x="-2" y="-7" as="offset"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="15" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;rose2&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=default;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="414.5" y="620" width="80" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontColor=#FFFFFF;endArrow=block;endFill=0;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="16" target="20" edge="1">
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontColor=#FFFFFF;endArrow=open;endFill=0;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="16" target="20" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="529.1666666666667" y="544" as="sourcePoint"/>
                         <mxPoint x="470.5" y="501" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="23" value="use" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="18" vertex="1" connectable="0">
+                    <mxGeometry x="0.4038" relative="1" as="geometry">
+                        <mxPoint x="17" y="12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="16" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;rose3&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=default;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="511.5" y="620" width="80" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" style="edgeStyle=none;html=1;fontColor=#FFFFFF;endArrow=block;endFill=0;endSize=12;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="20" edge="1" target="2">
+                <mxCell id="21" style="edgeStyle=none;html=1;fontColor=#FFFFFF;endArrow=open;endFill=0;endSize=12;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="20" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="530" y="490" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="20" value="&lt;div style=&quot;font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;RosePrototipe&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=default;fontColor=#FFFFFF;fillColor=default;" parent="1" vertex="1">
-                    <mxGeometry x="400" y="540" width="110" height="40" as="geometry"/>
+                    <mxGeometry x="400" y="530" width="110" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
