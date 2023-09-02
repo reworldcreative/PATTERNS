@@ -10,10 +10,10 @@ class SMSService {
   }
 }
 
-class EmailServiceAdapter {
+class EmailServiceAdapter extends SMSService {
   private emailService: EmailService;
-
   constructor(emailService: EmailService) {
+    super();
     this.emailService = emailService;
   }
   sendMessage(recipient: string, message: string): void {
@@ -27,9 +27,9 @@ function message(target: SMSService, to: string, message: string) {
 
 const emailService = new EmailService();
 const emailAdapter = new EmailServiceAdapter(emailService);
-message(emailAdapter, "user@example.com", "Hello via email!");
-// emailAdapter.sendMessage("user@example.com", "Hello via email!")
-// emailService.sendMessage("user@example.com", "Hello via email!") // error
 const smsService = new SMSService();
 message(smsService, "+1234567890", "Hello via SMS!");
-// smsService.sendMessage("+1234567890", "Hello via SMS!")
+message(emailAdapter, "user@example.com", "Hello via email!");
+// emailAdapter.sendMessage("user@example.com", "Hello via email!");
+// smsService.sendMessage("+1234567890", "Hello via SMS!");
+// emailService.sendMessage("user@example.com", "Hello via email!") // error
