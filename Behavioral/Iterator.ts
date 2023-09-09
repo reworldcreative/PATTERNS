@@ -20,7 +20,8 @@ class Library {
 
 interface Iterator<T> {
   hasNext(): boolean;
-  next(): IteratorResult<Book>;
+  next(): IteratorResult<T>;
+  iterate(): void;
 }
 
 class BookIterator implements Iterator<Book> {
@@ -40,6 +41,17 @@ class BookIterator implements Iterator<Book> {
     }
     return { value: undefined as any, done: true };
   }
+
+  iterate() {
+    while (this.hasNext()) {
+      const book = this.next().value;
+      if (book) {
+        console.log(
+          `Назва: ${book.title}, Автор: ${book.author}, Жанр: ${book.genre}`
+        );
+      }
+    }
+  }
 }
 
 const library = new Library();
@@ -48,12 +60,13 @@ library.addBook(new Book("1984", "Джордж Орвелл", "Наукова ф
 library.addBook(new Book("Пісня льоду й полум'я", "Джордж Мартін", "Фентезі"));
 
 const iterator = library.getCollection();
+iterator.iterate();
 
-while (iterator.hasNext()) {
-  const book = iterator.next().value;
-  if (book) {
-    console.log(
-      `Назва: ${book.title}, Автор: ${book.author}, Жанр: ${book.genre}`
-    );
-  }
-}
+// while (iterator.hasNext()) {
+//   const book = iterator.next().value;
+//   if (book) {
+//     console.log(
+//       `Назва: ${book.title}, Автор: ${book.author}, Жанр: ${book.genre}`
+//     );
+//   }
+// }

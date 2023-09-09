@@ -6,38 +6,27 @@ abstract class OrganizationComponent {
 }
 
 class Department extends OrganizationComponent {
-  private subDepartments: OrganizationComponent[] = [];
-  private employees: OrganizationComponent[] = [];
+  private children: OrganizationComponent[] = [];
 
   constructor(name: string) {
     super(name);
   }
 
   add(component: OrganizationComponent) {
-    if (component instanceof Employee) {
-      this.employees.push(component);
-    } else if (component instanceof Department) {
-      this.subDepartments.push(component);
-    }
+    this.children.push(component);
   }
 
   display(indentation: string) {
     console.log(indentation + "Department: " + this.name);
-    for (const employee of this.employees) {
-      employee.display(indentation + "  ");
-    }
-    for (const subDepartment of this.subDepartments) {
-      subDepartment.display(indentation + "  ");
+    for (const child of this.children) {
+      child.display(indentation + "  ");
     }
   }
 
   getTotalSalary() {
     let totalSalary = 0;
-    for (const employee of this.employees) {
-      totalSalary += employee.getTotalSalary();
-    }
-    for (const subDepartment of this.subDepartments) {
-      totalSalary += subDepartment.getTotalSalary();
+    for (const child of this.children) {
+      totalSalary += child.getTotalSalary();
     }
     return totalSalary;
   }
@@ -60,27 +49,27 @@ class Employee extends OrganizationComponent {
 }
 
 class Company extends OrganizationComponent {
-  private departments: OrganizationComponent[] = [];
+  private children: OrganizationComponent[] = [];
 
   constructor(name: string) {
     super(name);
   }
 
-  add(department: OrganizationComponent) {
-    this.departments.push(department);
+  add(component: OrganizationComponent) {
+    this.children.push(component);
   }
 
   display(indentation: string) {
     console.log(indentation + "Company: " + this.name);
-    for (const department of this.departments) {
-      department.display(indentation + "  ");
+    for (const child of this.children) {
+      child.display(indentation + "  ");
     }
   }
 
   getTotalSalary() {
     let totalSalary = 0;
-    for (const department of this.departments) {
-      totalSalary += department.getTotalSalary();
+    for (const child of this.children) {
+      totalSalary += child.getTotalSalary();
     }
     return totalSalary;
   }
@@ -112,5 +101,4 @@ company.add(development);
 company.add(marketing);
 
 company.display("");
-
 console.log("Total Salary: $" + company.getTotalSalary());

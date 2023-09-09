@@ -9,7 +9,7 @@ class OrderMediator {
   createOrder(product: string, quantity: number, customer: Customer) {
     const order = new Order(this.orders.length + 1, product, quantity);
     this.orders.push(order);
-    customer.receiveOrder(order);
+    order.receiveOrder(customer);
   }
 }
 
@@ -23,6 +23,12 @@ class Order {
   getInfo(): string {
     return `Order ID: ${this.orderId}, Product: ${this.product}, Quantity: ${this.quantity}`;
   }
+
+  receiveOrder(customer: Customer) {
+    console.log(
+      `[${customer.getName()}] Received new order: ${this.getInfo()}`
+    );
+  }
 }
 
 class Customer {
@@ -30,11 +36,10 @@ class Customer {
     this.mediator.registerCustomer(this);
   }
 
-  receiveOrder(order: Order) {
-    console.log(`[${this.name}] Received new order: ${order.getInfo()}`);
+  getName(): string {
+    return this.name;
   }
-
-  makeOrder(product: string, quantity: number) {
+  makeOrder(product: string, quantity: number): void {
     this.mediator.createOrder(product, quantity, this);
   }
 }

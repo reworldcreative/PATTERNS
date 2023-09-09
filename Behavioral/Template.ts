@@ -1,6 +1,9 @@
 abstract class Game {
-  protected initialize(): void {}
-  protected startPlay(): void {}
+  // abstract
+  protected initialize(): void {
+    console.log("Game initialized");
+  }
+  protected abstract startPlay(): void;
   protected endPlay(): void {}
   protected awardPlayers(): void {}
 
